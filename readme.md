@@ -15,8 +15,8 @@ If you came here to get started on using LCCF and/or LCRC for network inference 
 3. For a time-series data set `TS` given in the form of a 2d numpy array, you can now infer a network structure with `m` edges a given number of edges in one line:
 
         A = inf_via_LCCF(TS, m)
-
- or 
+        
+  or 
 
         A = inf_via_LCRC(TS, m)
 
