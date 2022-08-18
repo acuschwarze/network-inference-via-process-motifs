@@ -6,12 +6,13 @@ Code for producing the results and figures in "Network inference via process mot
 
 If you came here to get started on using LCCF and/or LCRC for network inference ASAP, here is a 3-step guide:
 
-(1) Download the file `qsPEMs.py` and copy it to your working directory. (Not the repository - just that one file!) 
-(2) Add the following code snippet to the files in which you want to use LCCF and/or LCRC. 
+1. Download the file `qsPEMs.py` and copy it to your working directory. (Not the repository - just that one file!) 
+
+2. Add the following code snippet to the files in which you want to use LCCF and/or LCRC. 
 
     from qsPEMs import inf_via_LCCF, inf_via_LCRC
 
-(3) For a time-series data set `TS` given in the form of a 2d numpy array, you can now infer a network structure with `m` edges a given number of edges in one line:
+3. For a time-series data set `TS` given in the form of a 2d numpy array, you can now infer a network structure with `m` edges a given number of edges in one line:
 
     A = inf_via_LCCF(TS, m)
 
