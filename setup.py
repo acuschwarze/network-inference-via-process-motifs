@@ -8,6 +8,6 @@ setup(name='qspems',
       author_email='alice.c.schwarze@dartmouth.edu',
       license='MIT',
       packages=['qspems'],
-      requires=['numpy'],
+      install_requires=['numpy'],
       setup_requires=['wheel'],
       zip_safe=False)
