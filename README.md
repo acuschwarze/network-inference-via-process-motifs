@@ -6,19 +6,21 @@ Code for producing the results and figures in "Network inference via process mot
 
 If you came here to get started on using LCCF and/or LCRC for network inference ASAP, here is a 3-step guide:
 
-1. Download the file `qsPEMs.py` and copy it to your working directory. (Not the repository - just that one file!) 
+1. Install the package from Github via pip:
+
+    pip install git+https://github.com/acuschwarze/network-inference-via-process-motifs.git
 
 2. Add the following code snippet to the files in which you want to use LCCF and/or LCRC. 
 
-    from qsPEMs import inf_via_LCCF, inf_via_LCRC
+    import qspems
 
 3. For a time-series data set `TS` given in the form of a 2d numpy array, you can now infer a network structure with `m` edges a given number of edges in one line:
 
-        A = inf_via_LCCF(TS, m)
+        A = qspems.inf_via_LCCF(TS, m)
 
     or 
     
-        A = inf_via_LCRC(TS, m)
+        A = qspems.inf_via_LCRC(TS, m)
 
 The 2d numpy array `A` is the adjacency matrix of the inferred directed, unweighted network. If you set `num_edges` to `None`, `A` is a weighted score matrix. 
 
@@ -26,7 +28,7 @@ You can add the keyword argument `max_lag` to indicate if you expect any tranmis
 
 #### Files explained
 
-* `qsPEMs.py` is the lite version of our code library. It lets a user compute the pairwise edge measures LCCF and LCRC and infer networks from them. (The non-lite version (i.e., all other files in this repository) includes functions for comparing LCCF and LCRC to other pairwise edge measures, running parameter sweeps, and plotting results.)
+* `qspems/qsPEMs.py` is the lite version of our code library. It lets a user compute the pairwise edge measures LCCF and LCRC and infer networks from them. (The non-lite version (i.e., all other files in this repository) includes functions for comparing LCCF and LCRC to other pairwise edge measures, running parameter sweeps, and plotting results.)
 * `notebooks-figures/` includes jupyter notebooks for recreating the figures in our paper.
 * `notebooks-other/` includes notebooks that we used to explore some aspects of the stochastic difference model and/or our proposed inference methods. Specifically, it includes a notebook where we derive the simplified expressions for the correction factors $\alpha^{(LCCF)}$ and $\alpha^{(LCRC)}$.
 * `utils/` includes several function libraries that we have written to use in our notebooks.
@@ -39,4 +41,3 @@ dill, matplotlib, networkx, netrd, numpy, scipy, seaborn,
 
 ##### Other python libraries
 curvygraph (included in libs)
-
