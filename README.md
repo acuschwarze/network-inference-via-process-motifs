@@ -1,6 +1,8 @@
 # Network inference via process motifs
 
-Code for producing the results and figures in "Network inference via process motifs" by Alice C Schwarze, Sara M. Ichinaga, and Bingni W. Brunton.
+This repository contains:
+* code for a method for fast network inference from time-series data
+* code for producing the results and figures in "Network inference via process motifs" by Alice C Schwarze, Sara M. Ichinaga, and Bingni W. Brunton.
 
 #### Quickstart
 
